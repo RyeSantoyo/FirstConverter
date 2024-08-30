@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Unit Converter Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .heading{
+            text-align: center;
+        }
+        .convertion {
+            margin-bottom: 20px;
+            margin-left: 25%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background: #ccc;
+            width:fit-content;
+        }
+        .converter-section h2 {
+            margin-top: 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Unit Converter</h1>
+
+    <!-- Length Converter Section -->
+    <div class="convertion">
+        <h2>Length Converter</h2>
+        <label for="lengthValue">Value:</label>
+        <input type="number" id="lengthValue" placeholder="Enter value">
+        <br>
+        <label for="fromLengthUnit">From:</label>
+        <select id="fromLengthUnit">
+            <option value="mm">Millimeters</option>
+            <option value="cm">Centimeter</option>
+            <option value="m">Meter</option>
+            <option value="km">Kilometer</option>
+            <option value="in">Inch</option>
+            <option value="ft">Foot</option>
+            <option value="yd">Yard</option>
+            <option value="mi">Mile</option>
+        </select>
+        <br>
+        <label for="toLengthUnit">To:</label>
+        <select id="toLengthUnit">
+            <option value="mm">Millimeter</option>
+            <option value="cm">Centimeter</option>
+            <option value="m">Meter</option>
+            <option value="km">Kilometer</option>
+            <option value="in">Inch</option>
+            <option value="ft">Foot</option>
+            <option value="yd">Yard</option>
+            <option value="mi">Mile</option>
+        </select>
+        <br>
+        <button onclick="convertLength()">Start</button>
+        <p id="lengthResult"></p>
+    </div>
+
+    <!-- Weight Converter Section -->
+    <div class="convertion">
+        <h2>Weight Converter</h2>
+        <label for="weightValue">Value:</label>
+        <input type="number" id="weightValue" placeholder="Enter value">
+        <br>
+        <label for="fromWeightUnit">From:</label>
+        <select id="fromWeightUnit">
+            <option value="mg">Milligram</option>
+            <option value="g">Gram</option>
+            <option value="kg">Kilogram</option>
+            <option value="oz">Ounce</option>
+            <option value="lb">Pound</option>
+        </select>
+        <br>
+        <label for="toWeightUnit">To:</label>
+        <select id="toWeightUnit">
+            <option value="mg">Milligram</option>
+            <option value="g">Gram</option>
+            <option value="kg">Kilogram</option>
+            <option value="oz">Ounce</option>
+            <option value="lb">Pound</option>
+        </select>
+        <br>
+        <button onclick="convertWeight()">Start</button>
+        <p id="weightResult"></p>
+    </div>
+
+    <!-- Temperature Converter Section -->
+    <div class="convertion">
+        <h2>Temperature Converter</h2>
+        <label for="tempValue">Value:</label>
+        <input type="number" id="tempValue" placeholder="Enter value">
+        <br>
+        <label for="fromTempUnit">From:</label>
+        <select id="fromTempUnit">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+        </select>
+        <br>
+        <label for="toTempUnit">To:</label>
+        <select id="toTempUnit">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+        </select>
+        <br>
+        <button onclick="convertTemperature()">Start</button>
+        <p id="tempResult"></p>
+    </div>
+
+    <script src="./js.js"></script>
+</body>
+</html>
